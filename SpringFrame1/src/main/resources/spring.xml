@@ -1,0 +1,41 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    <bean id="alien" class="org.demo.Alien" scope="prototype">-->
+<!--    </bean>-->
+<!--    <bean id="alien" class="org.demo.Alien">-->
+<!--        <property name="data" value="25">-->
+<!--        </property>-->
+<!--    </bean>-->
+ <!--  <bean id="alien" class="org.demo.Alien">
+        <property name="test" ref="test">
+        </property>
+    </bean>
+    <bean id ="test" class="org.demo.Test">
+    </bean>
+    */
+    -->
+
+<!--    Constructor property-->
+   <!-- <bean id="alien" class="org.demo.Alien">
+        <constructor-arg value="25"/>
+        <constructor-arg value="Sathish"/>
+    </bean>
+    <bean id ="test" class="org.demo.Test">
+    </bean>
+  -->
+
+    <!-- AutoWring -->
+    <bean id="alien" class="org.demo.Alien" autowire="byType">
+        <property value="25" name="age" />
+<!--        <property name="com" ref="com1"/>-->
+    </bean>
+    <bean id ="com1" class="org.demo.Desktop">
+    </bean>
+  <bean id ="com2" class="org.demo.Laptop" primary="true">
+    </bean> sz
+
+</beans>
